@@ -13,7 +13,7 @@ return {
           "pylsp",
           "tsserver",
           "lua_ls",
-          "gopls"
+          "gopls",
         },
       })
     end,
