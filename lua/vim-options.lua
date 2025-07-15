@@ -16,14 +16,20 @@ vim.opt.foldnestmax = 4
 
 vim.keymap.set("n", "<leader>w", ":w!<CR>", {})
 vim.keymap.set("n", "<leader>q", ":q!<CR>", {})
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", {})
+vim.keymap.set("n", "<C-t>", "<CMD>tabnew<CR>", {})
+vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", {})
 
 vim.o.guicursor = table.concat({
-  "n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-  "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-  "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
+	"n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+	"i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+	"r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
 }, ",")
 
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+	command = "if mode() != 'c' | checktime | endif",
+	pattern = { "*" },
+})
 -- vim.api.nvim_create_augroup("LspFormatting", {})
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --   group = augroup,
