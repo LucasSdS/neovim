@@ -11,7 +11,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "pylsp",
-          "tsserver",
+          "ts_ls",
           "lua_ls",
           "gopls",
         },
@@ -24,7 +24,7 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       lspconfig.pylsp.setup({})
-      lspconfig.tsserver.setup({})
+      lspconfig.ts_ls.setup({})
       lspconfig.gopls.setup({})
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})

@@ -18,6 +18,7 @@ vim.keymap.set("n", "<leader>w", ":w!<CR>", {})
 vim.keymap.set("n", "<leader>q", ":q!<CR>", {})
 vim.keymap.set("n", "<C-t>", "<CMD>tabnew<CR>", {})
 vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", {})
+vim.keymap.set("v", "<leader>y", '"+y', {})
 
 vim.o.guicursor = table.concat({
 	"n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
