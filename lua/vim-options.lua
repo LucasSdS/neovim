@@ -31,6 +31,8 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 	command = "if mode() != 'c' | checktime | endif",
 	pattern = { "*" },
 })
+
+-- AUTO FORMAT ON FILE SAVE
 -- vim.api.nvim_create_augroup("LspFormatting", {})
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --   group = augroup,
