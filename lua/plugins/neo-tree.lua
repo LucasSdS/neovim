@@ -23,7 +23,7 @@ return {
         },
       },
     })
-    vim.keymap.set("n", "<C-e>", ":Neotree toggle<CR>")
-    vim.keymap.set("n", "<C-n>", ":Neotree<CR>")
+    vim.keymap.set("n", "<C-e>", ":Neotree toggle<CR>", { desc = "Toggle file tree" })
+    vim.keymap.set("n", "<C-n>", ":Neotree<CR>", { desc = "Focus file tree" })
   end,
 }
